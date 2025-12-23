@@ -5,22 +5,16 @@ import yt_dlp
 # Seting folder template agar bisa terbaca dari folder api
 app = Flask(__name__, template_folder='../templates')
 
-# Penting untuk Vercel
-app.debug = True
-
 @app.route('/', methods=['GET', 'POST'])
 def home():
     video_info = None
     if request.method == 'POST':
         url = request.form.get('url_video')
-        # Konfigurasi agar ada suara dan pencarian cepat
-       ydl_opts = {
+        # Konfigurasi agar ada suara (mencari single file MP4)
+        ydl_opts = {
             'quiet': True,
             'no_warnings': True,
-            # 'b' mencari file yang sudah ada Video + Audio (Muxed)
-            # 'ext=mp4' memastikan formatnya MP4 agar bisa diputar di semua HP
-            'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
-            'check_formats': True,
+            'format': 'best[ext=mp4]/best',
         }
         try:
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -30,5 +24,5 @@ def home():
             
     return render_template('index.html', video=video_info)
 
-# Ini variabel yang dicari Vercel
+# Baris ini penting agar Vercel bisa menjalankan aplikasinya
 app = app
