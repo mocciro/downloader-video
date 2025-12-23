@@ -13,10 +13,12 @@ def home():
     video_info = None
     if request.method == 'POST':
         url = request.form.get('url_video')
-        ydl_opts = {
+      ydl_opts = {
             'quiet': True,
             'no_warnings': True,
-            'check_formats': False, 
+            'check_formats': False,
+            # Tambahkan baris di bawah ini:
+            'format': 'best[ext=mp4]/best', 
         }
         try:
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
