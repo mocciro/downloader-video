@@ -5,84 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
     
-    <title>Video Downloader Pro - Unduh Video TikTok, YT & IG Gratis</title>
-    <meta name="description" content="Cara tercepat download video TikTok tanpa watermark, YouTube MP4, dan Instagram Reels gratis dengan kualitas tinggi dan suara jernih.">
-    <meta name="keywords" content="download video tiktok, downloader youtube mp4, unduh video instagram, video downloader tanpa watermark">
+    <title>Video Downloader Pro - Unduh Video TikTok & YouTube Gratis</title>
+    <meta name="description" content="Download video TikTok tanpa watermark, YouTube MP4, dan Instagram dengan suara jernih. Cepat, gratis, dan tanpa aplikasi tambahan.">
+    <meta name="keywords" content="download video tiktok, video downloader, youtube mp4, simpan video ig, tanpa watermark">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { background-color: #f4f7f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; }
-        .card { border-radius: 15px; border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .btn-primary { background-color: #ff0000; border: none; padding: 10px 25px; }
-        .btn-primary:hover { background-color: #cc0000; }
-        video { border-radius: 10px; background: #000; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
-        .seo-section { line-height: 1.8; font-size: 0.95rem; }
-        .seo-section h3, .seo-section h5 { color: #cc0000; margin-top: 25px; }
+        body { background-color: #f0f2f5; font-family: 'Segoe UI', sans-serif; }
+        .main-card { background: white; border-radius: 15px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); border: none; }
+        .btn-check-video { background-color: #e62117; color: white; font-weight: bold; border: none; }
+        .btn-check-video:hover { background-color: #c21c12; color: white; }
+        .video-container { background: #000; border-radius: 10px; overflow: hidden; margin-top: 20px; }
+        .seo-article { background: #fff; padding: 30px; margin-top: 40px; border-radius: 15px; border: 1px solid #ddd; }
+        .seo-article h3 { color: #e62117; }
     </style>
 </head>
 <body>
 
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card p-4 mb-5">
-                    <h2 class="text-center mb-4 text-danger fw-bold">Social Media Downloader</h2>
-                    <form method="POST">
-                        <div class="input-group mb-3">
-                            <input type="text" name="url_video" class="form-control form-control-lg" placeholder="Tempel link video di sini..." required>
-                            <button class="btn btn-primary fw-bold" type="submit">Cek Video</button>
-                        </div>
-                    </form>
-
-                    {% if video %}
-                        {% if video.error %}
-                            <div class="alert alert-danger">Terjadi kesalahan: Gagal mengambil video. Pastikan link benar.</div>
-                        {% else %}
-                            <div class="mt-4 text-center">
-                                <h5 class="fw-bold">{{ video.title }}</h5>
-                                <video width="100%" controls class="mt-2">
-                                    <source src="{{ video.url }}" type="video/mp4">
-                                </video>
-                                <a href="{{ video.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-lg w-100 mt-3 fw-bold">
-                                    Download Video Sekarang
-                                </a>
-                                <p class="small text-muted mt-2 text-start">
-                                    *Catatan: Jika download tidak mulai otomatis, klik kanan tombol hijau lalu pilih <strong>"Save Link As"</strong> (di PC) atau tekan lama lalu <strong>"Download Link"</strong> (di HP).
-                                </p>
-                            </div>
-                        {% endif %}
-                    {% endif %}
-                </div>
-
-                <div class="seo-section bg-white p-4 rounded-4 shadow-sm">
-                    <h3>Download Video Media Sosial Tanpa Watermark</h3>
-                    <p>Apakah Anda mencari cara termudah untuk menyimpan video favorit dari internet? Alat <strong>Video Downloader Pro</strong> kami dirancang khusus untuk membantu Anda mengunduh konten dari berbagai platform seperti TikTok, YouTube, dan Instagram secara gratis.</p>
-                    
-                    <h5>Kenapa Harus Menggunakan Layanan Kami?</h5>
-                    <ul>
-                        <li><strong>Kualitas MP4 Terbaik:</strong> Kami selalu memberikan link download dengan resolusi tertinggi yang tersedia.</li>
-                        <li><strong>Video dengan Suara:</strong> Berbeda dengan downloader lain, teknologi kami memastikan audio tetap jernih dan tersinkronisasi.</li>
-                        <li><strong>Tanpa Watermark TikTok:</strong> Simpan video TikTok bersih tanpa logo yang menutupi konten.</li>
-                        <li><strong>Keamanan Terjamin:</strong> Anda tidak perlu login atau menginstal aplikasi tambahan yang berbahaya.</li>
-                    </ul>
-
-                    <h5>Cara Mengunduh Video dengan Mudah:</h5>
-                    <ol>
-                        <li>Buka aplikasi media sosial (TikTok/YouTube/IG) dan <strong>Salin Tautan</strong> video yang Anda sukai.</li>
-                        <li>Kembali ke website ini dan <strong>Tempel Link</strong> pada kolom input di atas.</li>
-                        <li>Klik tombol <strong>Cek Video</strong> dan tunggu preview muncul.</li>
-                        <li>Klik <strong>Download Video Sekarang</strong> untuk menyimpan langsung ke galeri Anda.</li>
-                    </ol>
-
-                    <p class="mt-4 text-muted small"><em>Disclaimer: Website ini hanya alat bantu. Mohon gunakan video yang diunduh dengan bijak dan tetap hargai hak cipta pemilik konten asli.</em></p>
-                </div>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            
+            <div class="card main-card p-4">
+                <h1 class="text-center mb-4 text-danger fw-bold">Social Media Downloader</h1>
                 
-                <footer class="text-center mt-5 text-muted small">
-                    &copy; 2025 Video Downloader Pro - Cepat, Gratis, & Berkualitas.
-                </footer>
+                <form method="POST">
+                    <div class="input-group input-group-lg mb-3">
+                        <input type="text" name="url_video" class="form-control" placeholder="Tempel link video di sini..." required>
+                        <button class="btn btn-check-video" type="submit">Cek Video</button>
+                    </div>
+                </form>
+
+                {% if video %}
+                    {% if video.error %}
+                        <div class="alert alert-danger text-center">
+                            <strong>Maaf!</strong> {{ video.error }} <br>
+                            <small>Coba gunakan link video lain (TikTok biasanya lebih lancar).</small>
+                        </div>
+                    {% else %}
+                        <div class="mt-4 text-center">
+                            <h5 class="fw-bold">{{ video.title }}</h5>
+                            
+                            <div class="video-container">
+                                <video width="100%" controls>
+                                    <source src="{{ video.url }}" type="video/mp4">
+                                    Browser Anda tidak mendukung video.
+                                </video>
+                            </div>
+                            
+                            <a href="{{ video.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-lg w-100 mt-3 fw-bold">
+                                Download Video (MP4)
+                            </a>
+                            <p class="text-muted small mt-2">
+                                *Jika video terbuka di tab baru, klik titik tiga di pojok video lalu pilih "Download".
+                            </p>
+                        </div>
+                    {% endif %}
+                {% endif %}
             </div>
+
+            <div class="seo-article">
+                <h3>Cara Download Video TikTok & YouTube Tanpa Aplikasi</h3>
+                <p>Selamat datang di <strong>Video Downloader Pro</strong>, alat terbaik untuk menyimpan konten favorit Anda dari internet. Kami menyediakan layanan unduhan video dari TikTok, YouTube, Instagram, dan Facebook dengan kualitas HD.</p>
+                
+                <h5 class="mt-4">Kenapa Menggunakan Layanan Kami?</h5>
+                <ul>
+                    <li><strong>Video dengan Suara:</strong> Kami menjamin file MP4 yang Anda unduh memiliki audio yang jernih.</li>
+                    <li><strong>Tanpa Watermark:</strong> Unduh video TikTok bersih tanpa logo yang mengganggu.</li>
+                    <li><strong>Gratis Selamanya:</strong> Tidak perlu langganan atau daftar akun.</li>
+                </ul>
+
+                <h5 class="mt-4">Panduan Penggunaan:</h5>
+                <ol>
+                    <li>Salin tautan (link) video dari aplikasi media sosial Anda.</li>
+                    <li>Tempel tautan tersebut ke kolom input di atas.</li>
+                    <li>Klik tombol merah "Cek Video".</li>
+                    <li>Tunggu sebentar, lalu klik tombol hijau "Download Video".</li>
+                </ol>
+            </div>
+
+            <footer class="text-center mt-5 text-muted small">
+                &copy; 2025 Video Downloader Pro. All rights reserved.
+            </footer>
+
         </div>
     </div>
+</div>
 
 </body>
 </html>
