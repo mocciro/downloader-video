@@ -14,10 +14,13 @@ def home():
     if request.method == 'POST':
         url = request.form.get('url_video')
         # Konfigurasi agar ada suara dan pencarian cepat
-        ydl_opts = {
+       ydl_opts = {
             'quiet': True,
             'no_warnings': True,
-            'format': 'best[ext=mp4]/best',
+            # 'b' mencari file yang sudah ada Video + Audio (Muxed)
+            # 'ext=mp4' memastikan formatnya MP4 agar bisa diputar di semua HP
+            'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
+            'check_formats': True,
         }
         try:
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
