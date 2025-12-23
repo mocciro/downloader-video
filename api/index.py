@@ -1,14 +1,18 @@
+import os
 from flask import Flask, render_template, request
 import yt_dlp
 
-app = Flask(__name__)
+# Konfigurasi folder templates agar terbaca dari dalam folder api
+app = Flask(__name__, template_folder='../templates')
+
+# Tambahkan ini agar Vercel mengenali aplikasi sebagai 'app'
+application = app
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
     video_info = None
     if request.method == 'POST':
         url = request.form.get('url_video')
-        # Settingan agar pencarian kilat
         ydl_opts = {
             'quiet': True,
             'no_warnings': True,
@@ -22,5 +26,6 @@ def home():
             
     return render_template('index.html', video=video_info)
 
+# Baris ini penting untuk local testing tapi tidak masalah jika ada di Vercel
 if __name__ == '__main__':
     app.run(debug=True)
